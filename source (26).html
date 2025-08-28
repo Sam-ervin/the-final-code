@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+            <style></style>
+        </head>
+        <body>
+            
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Code Entry</title>
+  <style>
+    body {
+      background: black;
+      color: #0f0;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+      text-align: center;
+      overflow: hidden;
+    }
+    h1 {
+      font-size: 2rem;
+      letter-spacing: 2px;
+      animation: flicker 2s infinite;
+    }
+    input {
+      background: black;
+      border: 2px solid #0f0;
+      color: #0f0;
+      padding: 10px;
+      font-size: 1rem;
+      margin-top: 20px;
+      text-align: center;
+      outline: none;
+    }
+    button {
+      margin-top: 15px;
+      background: black;
+      border: 2px solid #0f0;
+      color: #0f0;
+      padding: 8px 16px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #0f0;
+      color: black;
+    }
+    #message {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      white-space: pre-line;
+    }
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+      }
+      20%, 24%, 55% {
+        opacity: 0;
+      }
+    }
+  </style>
+
+
+  <h1>ENTER THE FINAL CODE</h1>
+  <input type="text" id="codeInput" placeholder="type here...">
+  <button onclick="checkCode()">SUBMIT</button>
+  <div id="message" style="color: rgb(0, 255, 0);">Correct. DM me the word frank</div>
+
+  <script>
+    const SECRET = "FRANK"; // change to your spectrogram word
+
+    function checkCode() {
+      const input = document.getElementById("codeInput").value.trim().toUpperCase();
+      const message = document.getElementById("message");
+
+      if (input === SECRET) {
+        message.style.color = "#0f0";
+        message.textContent = "Correct. DM me the word frank";
+      } else {
+        message.style.color = "red";
+        message.textContent = "Wrong code... the shadows whisper again.";
+      }
+    }
+  </script>
+
+
+
+            <script>// Write JavaScript here</script>
+        
+    
+</body>
